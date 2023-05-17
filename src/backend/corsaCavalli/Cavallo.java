@@ -26,7 +26,7 @@ public class Cavallo extends JLabel implements Runnable {
 
         for (int i = 0; i < icons.length; i++) {
             int j = i + 1;
-            ImageIcon img = new ImageIcon("src/assets/HorseAnimation/Horse" + j + ".gif");
+            ImageIcon img = new ImageIcon(getClass().getClassLoader().getResource("HorseAnimation/Horse"+ j + ".gif"));
             Image image = img.getImage();
             Image imgScaled = image.getScaledInstance(150, 120, Image.SCALE_SMOOTH);
             ImageIcon scaledIcon = new ImageIcon(imgScaled);

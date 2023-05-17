@@ -39,7 +39,7 @@ public class Access extends JPanel {
         // Setting background image
         JLabel Background = new JLabel("");
         try {
-            Image img = ImageIO.read(Objects.requireNonNull(getClass().getResource("../assets/bg-access.jpg"))).getScaledInstance(600, 600, Image.SCALE_SMOOTH);
+            Image img = ImageIO.read(Objects.requireNonNull(getClass().getClassLoader().getResource("bg-access.jpg"))).getScaledInstance(600, 600, Image.SCALE_SMOOTH);
             Background.setIcon(new ImageIcon(img));
         } catch (Exception ignored) {
         }

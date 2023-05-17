@@ -9,6 +9,7 @@ import java.io.FileReader;
 import java.io.PrintWriter;
 import java.util.LinkedHashMap;
 import java.util.Objects;
+import java.util.ResourceBundle;
 
 /**
  * This custom service allows authenticating user with JSON File
@@ -93,7 +94,7 @@ public class Autenticazione {
      */
     private static JSONArray reader() {
         try {
-            Object obj = new JSONParser().parse(new FileReader("src\\backend\\auth\\Database.json"));
+            Object obj = new JSONParser().parse(new FileReader("C:/Users/saric/IdeaProjects/Virtual-Casino/resources/Database.json"));
             return (JSONArray) obj;
         } catch (Exception e) {
             e.printStackTrace();
@@ -111,7 +112,7 @@ public class Autenticazione {
     private static boolean writer(JSONArray json) {
         // Scrive il file json
         try {
-            PrintWriter pw = new PrintWriter("src\\backend\\auth\\Database.json");
+            PrintWriter pw = new PrintWriter("resources/Database.json");
             pw.write(json.toJSONString());
 
             pw.flush();

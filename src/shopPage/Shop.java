@@ -94,7 +94,7 @@ public class Shop extends JPanel {
         JLabel iconPacchetto = new JLabel();
         iconPacchetto.setBounds(20, 50, 250, 250);
         try {
-            Image img = ImageIO.read(Objects.requireNonNull(getClass().getResource("../assets/starter.png"))).getScaledInstance(200, 200, Image.SCALE_SMOOTH);
+            Image img = ImageIO.read(Objects.requireNonNull(getClass().getClassLoader().getResource("starter.png"))).getScaledInstance(200, 200, Image.SCALE_SMOOTH);
             iconPacchetto.setIcon(new ImageIcon(img));
         } catch (Exception ignored) {
         }
@@ -164,7 +164,7 @@ public class Shop extends JPanel {
         JLabel iconPacchetto2 = new JLabel();
         iconPacchetto2.setBounds(20, 50, 250, 250);
         try {
-            Image img = ImageIO.read(Objects.requireNonNull(getClass().getResource("../assets/pro.png"))).getScaledInstance(250, 250, Image.SCALE_SMOOTH);
+            Image img = ImageIO.read(Objects.requireNonNull(getClass().getClassLoader().getResource("pro.png"))).getScaledInstance(250, 250, Image.SCALE_SMOOTH);
             iconPacchetto2.setIcon(new ImageIcon(img));
         } catch (Exception ignored) {
         }
@@ -233,7 +233,7 @@ public class Shop extends JPanel {
         JLabel iconPacchetto3 = new JLabel();
         iconPacchetto3.setBounds(20, 50, 250, 250);
         try {
-            Image img = ImageIO.read(Objects.requireNonNull(getClass().getResource("../assets/premium.png"))).getScaledInstance(200, 200, Image.SCALE_SMOOTH);
+            Image img = ImageIO.read(Objects.requireNonNull(getClass().getClassLoader().getResource("premium.png"))).getScaledInstance(200, 200, Image.SCALE_SMOOTH);
             iconPacchetto3.setIcon(new ImageIcon(img));
         } catch (Exception ignored) {
         }

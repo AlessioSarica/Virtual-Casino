@@ -35,7 +35,7 @@ public class Menu extends JPanel {
         // App Logo
         JLabel logo = new JLabel();
         try {
-            Image img = ImageIO.read(Objects.requireNonNull(getClass().getResource("../assets/logo.png"))).getScaledInstance(200, 200, Image.SCALE_SMOOTH);
+            Image img = ImageIO.read(Objects.requireNonNull(getClass().getClassLoader().getResource("logo.png"))).getScaledInstance(200, 200, Image.SCALE_SMOOTH);
             logo.setIcon(new ImageIcon(img));
         } catch (Exception ignored) {
         }
@@ -52,7 +52,7 @@ public class Menu extends JPanel {
         // Slot machine button
         JButton slotMachine = new JButton("Slot Machine");
         try {
-            Image img = ImageIO.read(Objects.requireNonNull(getClass().getResource("../assets/slot-machine.png"))).getScaledInstance(40, 40, Image.SCALE_SMOOTH);
+            Image img = ImageIO.read(Objects.requireNonNull(getClass().getClassLoader().getResource("slot-machine.png"))).getScaledInstance(40, 40, Image.SCALE_SMOOTH);
             slotMachine.setIcon(new ImageIcon(img));
         } catch (Exception ignored) {
         }
@@ -70,7 +70,7 @@ public class Menu extends JPanel {
         // Corsa cavalli button
         JButton corsaCavalli = new JButton("Corsa Cavalli");
         try {
-            Image img = ImageIO.read(Objects.requireNonNull(getClass().getResource("../assets/corsa-cavalli.png"))).getScaledInstance(40, 40, Image.SCALE_SMOOTH);
+            Image img = ImageIO.read(Objects.requireNonNull(getClass().getClassLoader().getResource("corsa-cavalli.png"))).getScaledInstance(40, 40, Image.SCALE_SMOOTH);
             corsaCavalli.setIcon(new ImageIcon(img));
         } catch (Exception ignored) {
         }
@@ -88,7 +88,7 @@ public class Menu extends JPanel {
         // Black Jack button
         JButton blackJack = new JButton("Black Jack");
         try {
-            Image img = ImageIO.read(Objects.requireNonNull(getClass().getResource("../assets/blackjack.png"))).getScaledInstance(40, 40, Image.SCALE_SMOOTH);
+            Image img = ImageIO.read(Objects.requireNonNull(getClass().getClassLoader().getResource("blackjack.png"))).getScaledInstance(40, 40, Image.SCALE_SMOOTH);
             blackJack.setIcon(new ImageIcon(img));
         } catch (Exception ignored) {
         }
@@ -106,7 +106,7 @@ public class Menu extends JPanel {
         // Shop button
         JButton shop = new JButton("Shop");
         try {
-            Image img = ImageIO.read(Objects.requireNonNull(getClass().getResource("../assets/shop.png"))).getScaledInstance(40, 40, Image.SCALE_SMOOTH);
+            Image img = ImageIO.read(Objects.requireNonNull(getClass().getClassLoader().getResource("shop.png"))).getScaledInstance(40, 40, Image.SCALE_SMOOTH);
             shop.setIcon(new ImageIcon(img));
         } catch (Exception ignored) {
         }
@@ -133,7 +133,7 @@ public class Menu extends JPanel {
         // Logout button
         JButton logout = new JButton("Logout");
         try {
-            Image img = ImageIO.read(Objects.requireNonNull(getClass().getResource("../assets/logout.png"))).getScaledInstance(40, 40, Image.SCALE_SMOOTH);
+            Image img = ImageIO.read(Objects.requireNonNull(getClass().getClassLoader().getResource("logout.png"))).getScaledInstance(40, 40, Image.SCALE_SMOOTH);
             logout.setIcon(new ImageIcon(img));
         } catch (Exception ignored) {
         }

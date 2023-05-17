@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.PrintWriter;
 
+import backend.auth.Autenticazione;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.*;
@@ -79,7 +80,7 @@ public class JsonEdit {
      */
     private static JSONArray reader() {
         try {
-            Object obj = new JSONParser().parse(new FileReader("src\\backend\\auth\\Database.json"));
+            Object obj = new JSONParser().parse(new FileReader(String.valueOf(Autenticazione.class.getClassLoader().getResource("Database.json"))));
             return (JSONArray) obj;
         } catch (Exception e) {
             e.printStackTrace();
@@ -96,7 +97,7 @@ public class JsonEdit {
     private static boolean writer(JSONArray json) {
         // Scrive il file json
         try {
-            PrintWriter pw = new PrintWriter("src\\backend\\auth\\Database.json");
+            PrintWriter pw = new PrintWriter(String.valueOf(Autenticazione.class.getClassLoader().getResource("Database.json")));
             pw.write(json.toJSONString());
 
             pw.flush();

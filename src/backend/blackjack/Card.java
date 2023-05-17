@@ -7,6 +7,7 @@ import java.awt.*;
  * This class represents a Card of black jack extending a JLabel
  */
 public class Card extends JLabel {
+    private String segno;
     private final int value;
     private final int number;
     private final int suit;
@@ -19,13 +20,31 @@ public class Card extends JLabel {
         number = (int) ((Math.random() * 13) + 1);
         suit = (int) ((Math.random() * 4) + 1);
 
+        switch (suit){
+            case 1 ->{
+                segno = "cuori";
+            }
+
+            case 2 ->{
+                segno = "quadri";
+            }
+
+            case 3 ->{
+                segno = "fiori";
+            }
+
+            case 4 ->{
+                segno = "picche";
+            }
+        }
+
         value = Math.min(number, 10);
 
         this.setSize(100, 120);
         this.setPreferredSize(new Dimension(120, 120));
         this.setBackground(Color.red);
 
-        ImageIcon img = new ImageIcon("src/assets/" + suit + "/" + number + ".png");
+        ImageIcon img = new ImageIcon(getClass().getClassLoader().getResource(segno+"/"+number+".png"));
         Image image = img.getImage();
         Image imgScaled = image.getScaledInstance(100, 120, Image.SCALE_SMOOTH);
         ImageIcon scaledIcon = new ImageIcon(imgScaled);
